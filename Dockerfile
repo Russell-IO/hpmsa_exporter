@@ -1,7 +1,7 @@
-FROM ubuntu:artful
-MAINTAINER Antoine Millet <antoine.millet@enix.fr>
+FROM alpine:latest
+MAINTAINER Russell Clare <Russell@Clare.io>
 
-RUN apt update && apt install -y python3-lxml python3-prometheus-client python3-requests
+RUN apk add --no-cache python3 py3-lxml py3-prometheus-client py3-requests
 COPY msa_exporter.py /bin/msa_exporter
 RUN chmod +x /bin/msa_exporter
 
