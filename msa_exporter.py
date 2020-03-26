@@ -8,6 +8,8 @@ import requests
 import prometheus_client
 import lxml.etree
 
+import urllib3
+urllib3.disable_warnings()
 
 import xml.etree.ElementTree as ET
 
