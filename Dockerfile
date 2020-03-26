@@ -6,4 +6,4 @@ COPY msa_exporter.py /bin/msa_exporter
 RUN chmod +x /bin/msa_exporter
 
 EXPOSE 8080
-CMD /bin/msa_exporter --interval 15 --port 8080 "$HOST" "$LOGIN" "$PASSWORD"
+CMD /bin/msa_exporter --interval 15 --port 8080 "${MSA_HOST}" "${MSA_LOGIN}" "${MSA_PASSWORD}"
